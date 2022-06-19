@@ -14,9 +14,10 @@ terraform {
     }
   }
   cloud {
+
     organization = "Nokos"
     workspaces {
-      name = "terraform-azure"
+      name = "terraform-action"
     }
   }
   required_version = ">= 1.1.0"
