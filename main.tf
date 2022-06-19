@@ -13,11 +13,17 @@ terraform {
       version = ">= 2.1.0"
     }
   }
+  cloud {
+    organization = "Nokos"
+    workspaces {
+      name = "terraform-action"
+    }
+}
   required_version = ">= 1.1.0"
 }
 
 data "azurerm_kubernetes_cluster" "default" {
-  depends_on          = [module.aks-cluster] # refresh cluster state before reading
+  depends_on          = [module.aks-cluster] 
   name                = local.cluster_name
   resource_group_name = local.cluster_name
 }
