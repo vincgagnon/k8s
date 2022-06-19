@@ -14,6 +14,7 @@ terraform {
     }
   }
   cloud {
+
     organization = "Nokos"
     workspaces {
       name = "terraform-action"
