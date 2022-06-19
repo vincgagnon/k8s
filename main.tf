@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     kubernetes = {
-      source = "hashicorp/kubernetes"
+      source  = "hashicorp/kubernetes"
       version = ">= 2.0.3"
     }
     azurerm = {
@@ -13,7 +13,7 @@ terraform {
       version = ">= 2.1.0"
     }
   }
-    cloud {
+  cloud {
     organization = "Nokos"
     workspaces {
       name = "terraform-action"
